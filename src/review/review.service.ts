@@ -24,13 +24,13 @@ export class ReviewService {
     productId: string,
   ): Promise<DocumentType<ReviewModel>[]> {
     return this.reviewModel
-      .find({ productId: Types.ObjectId(productId) })
+      .find({ productId: new Types.ObjectId(productId) })
       .exec();
   }
 
   async deleteByProductId(productId: string) {
     return this.reviewModel
-      .deleteMany({ productId: Types.ObjectId(productId) })
+      .deleteMany({ productId: new Types.ObjectId(productId) })
       .exec();
   }
 }
