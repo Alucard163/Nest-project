@@ -17,5 +17,6 @@ import { TopPageModel } from "./top-page.model";
     ]),
   ],
   providers: [TopPageService],
+  exports: [TopPageService]
 })
 export class TopPageModule {}
